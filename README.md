@@ -225,7 +225,7 @@ Only added when official support is confirmed. See [BADGES.md](BADGES.md) for fu
 
 If this repo was useful to you, consider subscribing to **CodandoTV** — where we talk about mobile development, AI and much more.
 
-[![YouTube](https://img.shields.io/badge/YouTube-CodandoTV-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/@CodandoTV)
+[![YouTube](https://img.shields.io/badge/YouTube-CodandoTV-7C3AED?style=for-the-badge&logo=youtube&labelColor=FF0000)](https://www.youtube.com/@CodandoTV)
 
 ## Contributors
 

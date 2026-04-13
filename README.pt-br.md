@@ -225,4 +225,4 @@ Só são adicionadas quando o suporte é confirmado. Veja [BADGES.md](BADGES.md)
 
 Se esse repo foi útil pra você, considera se inscrever no canal **CodandoTV** — onde falamos sobre desenvolvimento mobile, IA e muito mais.
 
-[![YouTube](https://img.shields.io/badge/YouTube-CodandoTV-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/@CodandoTV)
+[![YouTube](https://img.shields.io/badge/YouTube-CodandoTV-7C3AED?style=for-the-badge&logo=youtube&labelColor=FF0000)](https://www.youtube.com/@CodandoTV)
