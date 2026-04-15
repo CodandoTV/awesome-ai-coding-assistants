@@ -70,6 +70,9 @@ Only added when official support is confirmed. See [BADGES.md](BADGES.md) for fu
 
 ### By Platform
 
+- **[android/skills](https://github.com/android/skills)** ![open source](https://img.shields.io/badge/open_source-0EA5E9?style=flat)  
+  > Official Android skills from Google — SKILL.md files for AGP upgrades, Jetpack Compose, Navigation, Performance and more
+
 - **[new-silvermoon/awesome-android-agent-skills](https://github.com/new-silvermoon/awesome-android-agent-skills)** ![claude](https://img.shields.io/badge/claude-FF6B35?style=flat) ![copilot](https://img.shields.io/badge/copilot-0078D4?style=flat) ![cursor](https://img.shields.io/badge/cursor-1A1A1A?style=flat&logoColor=white) ![gemini](https://img.shields.io/badge/gemini-4285F4?style=flat)  
   > Skills for modern Android: Kotlin, Jetpack Compose, KMP
 
