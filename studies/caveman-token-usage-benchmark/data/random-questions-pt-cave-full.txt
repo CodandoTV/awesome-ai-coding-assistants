@@ -1,0 +1,536 @@
+▗ ▗   ▖ ▖  Claude Code v2.1.92
+           Sonnet 4.6 · Claude Pro
+  ▘▘ ▝▝    /Users/rodrigo
+
+❯ /reload-plugins                                                               
+  ⎿  Reloaded: 1 plugin · 0 skills · 5 agents · 2 hooks · 0 plugin MCP servers ·
+      0 plugin LSP servers
+
+❯ Como funciona o sono? Por que precisamos dormir?                              
+
+⏺ Sono = ciclos ~90min de NREM + REM, repetidos 4-6x por noite.
+
+  NREM (3 estágios):
+  - N1: transição vigília→sono
+  - N2: temperatura cai, heart rate baixa, memória consolida
+  - N3 (sono profundo): reparo tecidual, hormônio do crescimento liberado,
+  sistema imune fortalece
+
+  REM:
+  - Cérebro quase tão ativo quanto acordado
+  - Sonhos intensos
+  - Consolidação emocional + memória procedural
+  - Corpo paralisado (atonia muscular)
+
+  Por que precisamos:
+
+  ┌────────────┬─────────────────────────────────────────────────────────────┐
+  │  Sistema   │                   O que acontece sem sono                   │
+  ├────────────┼─────────────────────────────────────────────────────────────┤
+  │ Cognitivo  │ Atenção, decisão, criatividade despencam                    │
+  ├────────────┼─────────────────────────────────────────────────────────────┤
+  │ Metabólico │ Insulina resiste, grelina sobe (fome)                       │
+  ├────────────┼─────────────────────────────────────────────────────────────┤
+  │ Imune      │ Citocinas inflamatórias sobem                               │
+  ├────────────┼─────────────────────────────────────────────────────────────┤
+  │ Neural     │ Limpeza de resíduos metabólicos via sistema glinfático      │
+  │            │ falha — beta-amiloide acumula (Alzheimer link)              │
+  ├────────────┼─────────────────────────────────────────────────────────────┤
+  │ Emocional  │ Amígdala hipereativa, córtex pré-frontal fraco              │
+  └────────────┴─────────────────────────────────────────────────────────────┘
+
+  Sistema glinfático = descoberta chave (2013). LCR flui pelo espaço entre
+  neurônios durante sono profundo e lava resíduos. Só funciona dormindo.
+
+  Mecanismos reguladores:
+  - Pressão homeostática: adenosina acumula acordado, limpa dormindo
+  - Ritmo circadiano: melatonina sobe com escuro, regula timing
+
+  Privação crônica = dano cumulativo. Sem "catch-up" total possível após muito
+  débito.
+
+❯ /context                                                                      
+  ⎿  Context Usage
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛀ ⛁   Sonnet 4.6
+                           claude-sonnet-4-6
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   17.8k/200k tokens (9%)
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   Estimated usage by category
+                           ⛁ System prompt: 7k tokens (3.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ System tools: 8k tokens (4.0%)
+                           ⛁ Memory files: 60 tokens (0.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ Skills: 938 tokens (0.5%)
+                           ⛁ Messages: 2.1k tokens (1.1%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛶ Free space: 148.9k (74.5%)
+                           ⛝ Autocompact buffer: 33k tokens (16.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     MCP tools · /mcp (loaded on-demand)
+
+     Available
+     └ mcp__claude_ai_Google_Drive__authenticate
+
+     Memory files · /memory
+     └ .claude/projects/-Users-rodrigo/memory/MEMORY.md: 60 tokens
+
+     Skills · /skills
+
+     User
+     └ android-cli: 43 tokens
+
+     Plugin
+     └ caveman: 102 tokens
+     └ caveman-commit: 92 tokens
+     └ compress: 88 tokens
+     └ caveman-review: 83 tokens
+     └ caveman-help: 54 tokens
+
+❯ Como funciona a memória humana? Por que esquecemos coisas?                    
+
+⏺ Tipos de memória:
+
+  ┌────────────────────┬────────────────────┬────────────────────────────┐
+  │        Tipo        │        Onde        │          Duração           │
+  ├────────────────────┼────────────────────┼────────────────────────────┤
+  │ Sensorial          │ Córtex sensorial   │ <1s                        │
+  ├────────────────────┼────────────────────┼────────────────────────────┤
+  │ Trabalho (working) │ Córtex pré-frontal │ segundos-minutos, ~4 itens │
+  ├────────────────────┼────────────────────┼────────────────────────────┤
+  │ Curto prazo        │ Hipocampo          │ horas                      │
+  ├────────────────────┼────────────────────┼────────────────────────────┤
+  │ Longo prazo        │ Córtex distribuído │ anos/vida                  │
+  └────────────────────┴────────────────────┴────────────────────────────┘
+
+  Como forma memória longa:
+
+  1. Codificação — hipocampo "grava" experiência, cria traço neural
+  2. Consolidação — sono N3 replica padrão do hipocampo pro córtex (replay)
+  3. Armazenamento — sinapses fortalecem via LTP (Long-Term Potentiation) — mais
+   AMPA receptors na sinapse
+  4. Retrieval — reativar padrão neural = "lembrar"
+
+  Por que esquecemos:
+
+  - Decaimento — sinapse não usada enfraquece (pruning)
+  - Interferência — memórias similares competem, nova sobrescreve antiga
+  - Falha de retrieval — traço existe mas sem cue pra acessar (tip-of-tongue)
+  - Reconsolidação — cada vez que lembra, memória fica instável temporariamente
+  e pode ser reescrita
+  - Emoção — amígdala modula força do traço; neutro esquece rápido, emocional
+  persiste
+  - Sono ruim — replay não acontece, consolidação falha
+
+  Curva de Ebbinghaus:
+  Sem revisão, ~50% esquecido em 1h, ~70% em 24h, ~90% em semana.
+
+  Fix: espaçamento (spaced repetition) força reconsolidação nos picos de
+  esquecimento — por isso Anki funciona.
+
+❯ /context                                                                      
+  ⎿  Context Usage
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛀ ⛁   Sonnet 4.6
+                           claude-sonnet-4-6
+     ⛁ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   19.7k/200k tokens (10%)
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   Estimated usage by category
+                           ⛁ System prompt: 7k tokens (3.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ System tools: 8k tokens (4.0%)
+                           ⛁ Memory files: 60 tokens (0.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ Skills: 938 tokens (0.5%)
+                           ⛁ Messages: 4.1k tokens (2.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛶ Free space: 147k (73.5%)
+                           ⛝ Autocompact buffer: 33k tokens (16.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     MCP tools · /mcp (loaded on-demand)
+
+     Available
+     └ mcp__claude_ai_Google_Drive__authenticate
+
+     Memory files · /memory
+     └ .claude/projects/-Users-rodrigo/memory/MEMORY.md: 60 tokens
+
+     Skills · /skills
+
+     User
+     └ android-cli: 43 tokens
+
+     Plugin
+     └ caveman: 102 tokens
+     └ caveman-commit: 92 tokens
+     └ compress: 88 tokens
+     └ caveman-review: 83 tokens
+     └ caveman-help: 54 tokens
+
+❯ Por que o céu é azul durante o dia e laranja/vermelho ao pôr do sol?          
+
+⏺ Espalhamento de Rayleigh.
+
+  Luz solar = todas frequências misturadas. Ao atravessar atmosfera, colide com
+  moléculas N₂/O₂.
+
+  Espalhamento ∝ 1/λ⁴ — comprimento de onda curto espalha muito mais.
+
+  ┌──────────┬────────┬────────────┐
+  │   Cor    │ λ (nm) │  Espalha   │
+  ├──────────┼────────┼────────────┤
+  │ Violeta  │ 380    │ muitíssimo │
+  ├──────────┼────────┼────────────┤
+  │ Azul     │ 450    │ muito      │
+  ├──────────┼────────┼────────────┤
+  │ Verde    │ 520    │ moderado   │
+  ├──────────┼────────┼────────────┤
+  │ Vermelho │ 700    │ pouco      │
+  └──────────┴────────┴────────────┘
+
+  Por que azul e não violeta? Violeta espalha mais, mas olho humano menos
+  sensível a violeta + sol emite menos violeta + violeta absorvido alto na
+  atmosfera. Net result: azul.
+
+  Pôr do sol:
+
+  Luz percorre caminho muito mais longo pela atmosfera (sol baixo no horizonte =
+   trajeto oblíquo).
+
+  Meio-dia:  Sol → 100km de atmosfera → olho
+  Pôr sol:   Sol → ~1500km de atmosfera → olho
+
+  Azul/verde espalhado tanto que some antes de chegar. Só vermelho/laranja (λ
+  longo, espalha pouco) sobrevive trajeto longo e chega ao olho.
+
+  Resumo: azul = espalhamento preferencial de λ curto. Vermelho/laranja = o que
+  sobra após azul ser espalhado fora do caminho.
+
+❯ /context                                                                      
+  ⎿  Context Usage
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛀ ⛁   Sonnet 4.6
+                           claude-sonnet-4-6
+     ⛁ ⛁ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   21.6k/200k tokens (11%)
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   Estimated usage by category
+                           ⛁ System prompt: 7k tokens (3.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ System tools: 8k tokens (4.0%)
+                           ⛁ Memory files: 60 tokens (0.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ Skills: 938 tokens (0.5%)
+                           ⛁ Messages: 5.9k tokens (2.9%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛶ Free space: 145.2k (72.6%)
+                           ⛝ Autocompact buffer: 33k tokens (16.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     MCP tools · /mcp (loaded on-demand)
+
+     Available
+     └ mcp__claude_ai_Google_Drive__authenticate
+
+     Memory files · /memory
+     └ .claude/projects/-Users-rodrigo/memory/MEMORY.md: 60 tokens
+
+     Skills · /skills
+
+     User
+     └ android-cli: 43 tokens
+
+     Plugin
+     └ caveman: 102 tokens
+     └ caveman-commit: 92 tokens
+     └ compress: 88 tokens
+     └ caveman-review: 83 tokens
+     └ caveman-help: 54 tokens
+
+❯ Como funciona uma vacina? Por que ela protege contra doenças?                 
+
+⏺ Vacina treina sistema imune sem causar doença.
+
+  Sistema imune normal (sem vacina):
+  1. Patógeno entra → células apresentadoras processam antígenos
+  2. Linfócitos B produzem anticorpos específicos
+  3. Linfócitos T matam células infectadas
+  4. ~1-2 semanas pra resposta eficaz — tempo que patógeno usa pra te matar
+
+  Com vacina:
+  Mesmo processo, mas com versão inofensiva do patógeno. Sistema imune gera
+  células de memória que persistem anos/décadas.
+
+  Reinfecção real → memória reconhece → resposta em horas, não semanas →
+  patógeno eliminado antes de causar dano.
+
+  Tipos de vacina:
+
+  ┌────────────┬──────────────────────────────┬────────────────────────────┐
+  │    Tipo    │         O que injeta         │          Exemplo           │
+  ├────────────┼──────────────────────────────┼────────────────────────────┤
+  │ Atenuada   │ Patógeno vivo enfraquecido   │ Febre amarela, sarampo     │
+  ├────────────┼──────────────────────────────┼────────────────────────────┤
+  │ Inativada  │ Patógeno morto               │ Gripe (injetável), polio   │
+  │            │                              │ (Salk)                     │
+  ├────────────┼──────────────────────────────┼────────────────────────────┤
+  │ Subunidade │ Fragmento proteico           │ Hepatite B, HPV            │
+  ├────────────┼──────────────────────────────┼────────────────────────────┤
+  │ mRNA       │ Instrução pra célula fazer   │ COVID Pfizer/Moderna       │
+  │            │ proteína                     │                            │
+  ├────────────┼──────────────────────────────┼────────────────────────────┤
+  │ Vetor      │ Vírus carrega gene do        │ COVID AstraZeneca          │
+  │ viral      │ antígeno                     │                            │
+  └────────────┴──────────────────────────────┴────────────────────────────┘
+
+  mRNA (mais novo):
+  mRNA injetado → ribossomo lê → célula fabrica spike protein
+  → imune reconhece como estranho → gera anticorpos
+  → mRNA degradado em dias (não entra no DNA)
+
+  Por que não protege 100%:
+  - Vírus muta → antígeno muda → anticorpos antigos encaixam menos (gripe,
+  COVID)
+  - Resposta individual varia (genética, idade, imunossupressão)
+  - Alguns patógenos evoluíram pra escapar imunidade
+
+  Imunidade coletiva: quando % suficiente da população imune, patógeno não acha
+  hospedeiro pra se espalhar — protege quem não pode vacinar.
+
+❯ /context                                                                      
+  ⎿  Context Usage
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛀ ⛁   Sonnet 4.6
+                           claude-sonnet-4-6
+     ⛁ ⛁ ⛁ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   23.5k/200k tokens (12%)
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   Estimated usage by category
+                           ⛁ System prompt: 7k tokens (3.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ System tools: 8k tokens (4.0%)
+                           ⛁ Memory files: 60 tokens (0.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ Skills: 938 tokens (0.5%)
+                           ⛁ Messages: 7.8k tokens (3.9%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛶ Free space: 143.2k (71.6%)
+                           ⛝ Autocompact buffer: 33k tokens (16.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     MCP tools · /mcp (loaded on-demand)
+
+     Available
+     └ mcp__claude_ai_Google_Drive__authenticate
+
+     Memory files · /memory
+     └ .claude/projects/-Users-rodrigo/memory/MEMORY.md: 60 tokens
+
+     Skills · /skills
+
+     User
+     └ android-cli: 43 tokens
+
+     Plugin
+     └ caveman: 102 tokens
+     └ caveman-commit: 92 tokens
+     └ compress: 88 tokens
+     └ caveman-review: 83 tokens
+     └ caveman-help: 54 tokens
+
+❯ Por que sentimos fome? Como o corpo sabe que precisa comer?                   
+
+⏺ Fome = sistema hormonal + neural + metabólico integrado.
+
+  Sensores principais:
+
+  ┌───────────────────────┬──────────────────────┬──────────────────────┐
+  │    O que cai/sobe     │        Sinal         │        Efeito        │
+  ├───────────────────────┼──────────────────────┼──────────────────────┤
+  │ Glicose sanguínea cai │ Hipotálamo detecta   │ Fome ativa           │
+  ├───────────────────────┼──────────────────────┼──────────────────────┤
+  │ Estômago vazio        │ Grelina sobe         │ "Estou vazio"        │
+  ├───────────────────────┼──────────────────────┼──────────────────────┤
+  │ Gordura corporal cai  │ Leptina cai          │ Fome crônica aumenta │
+  ├───────────────────────┼──────────────────────┼──────────────────────┤
+  │ Intestino com comida  │ GLP-1, PYY sobem     │ Saciedade            │
+  ├───────────────────────┼──────────────────────┼──────────────────────┤
+  │ Estômago cheio        │ Nervo vago → cérebro │ "Para de comer"      │
+  └───────────────────────┴──────────────────────┴──────────────────────┘
+
+  Circuito central — hipotálamo:
+  Neurônios AgRP/NPY → estimulam fome
+  Neurônios POMC     → suprimem fome
+  Hormônios periféricos modulam qual grupo "vence."
+
+  Grelina = hormônio chave da fome:
+  - Produzida no estômago
+  - Sobe antes das refeições (relógio circadiano aprende horário)
+  - Sobe com privação de sono (por isso privado de sono = mais fome)
+  - Age direto no hipotálamo ativando AgRP
+
+  Leptina = termostato de longo prazo:
+  - Produzida por adipócitos (células de gordura)
+  - Mais gordura → mais leptina → menos fome
+  - Obesidade causa resistência à leptina — sinal existe mas cérebro ignora
+
+  Por que fome volta rápido após dieta:
+  Perda de peso → leptina cai → hipotálamo interpreta como "estarvação" →
+  grelina sobe, metabolismo cai, fome aumenta. Mecanismo evoluiu pra
+  sobrevivência, não pra dieta moderna.
+
+  Fome hedônica (separada da homeostática):
+  Sistema dopaminérgico responde a comida palatável independente de necessidade
+  calórica. Ver/cheirar comida gostosa ativa núcleo accumbens → "quer" comer
+  mesmo sem fome real.
+
+❯ /context                                                                      
+  ⎿  Context Usage
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛀ ⛁   Sonnet 4.6
+                           claude-sonnet-4-6
+     ⛁ ⛁ ⛁ ⛁ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   25.4k/200k tokens (13%)
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   Estimated usage by category
+                           ⛁ System prompt: 7k tokens (3.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ System tools: 8k tokens (4.0%)
+                           ⛁ Memory files: 60 tokens (0.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ Skills: 938 tokens (0.5%)
+                           ⛁ Messages: 9.8k tokens (4.9%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛶ Free space: 141.2k (70.6%)
+                           ⛝ Autocompact buffer: 33k tokens (16.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     MCP tools · /mcp (loaded on-demand)
+
+     Available
+     └ mcp__claude_ai_Google_Drive__authenticate
+
+     Memory files · /memory
+     └ .claude/projects/-Users-rodrigo/memory/MEMORY.md: 60 tokens
+
+     Skills · /skills
+
+     User
+     └ android-cli: 43 tokens
+
+     Plugin
+     └ caveman: 102 tokens
+     └ caveman-commit: 92 tokens
+     └ compress: 88 tokens
+     └ caveman-review: 83 tokens
+     └ caveman-help: 54 tokens
+
+❯ Como funciona a gravidade? Por que objetos caem?                              
+
+⏺ Duas respostas — Newton e Einstein divergem.
+
+  ---
+  Newton (1687) — força à distância:
+
+  F = G × m₁ × m₂ / r²
+
+  Massa atrai massa. Força cai com quadrado da distância. Funciona pra 99% dos
+  casos práticos. Não explica por que — só descreve como.
+
+  ---
+  Einstein (1915) — curvatura do espaço-tempo:
+
+  Massa não "puxa" — massa curva o espaço-tempo ao redor dela. Objetos seguem
+  caminho mais reto possível (geodésica) nesse espaço curvo. Esse caminho parece
+   "queda" pra observador externo.
+
+  Analogia imperfeita mas útil:
+  Bola de boliche em lençol elástico → cria depressão
+  Bolinha de gude rola "em direção" à bola grande
+  Não é força — é geometria
+
+  Por que objeto em queda livre não "sente" gravidade:
+  Astronauta em órbita está em queda livre constante — não sente peso. Você
+  sentindo peso agora = chão te empurrando pra cima contra sua geodésica
+  natural.
+
+  ---
+  Diferenças práticas Newton vs Einstein:
+
+  ┌──────────────────────┬────────────────┬───────────────────────────────┐
+  │       Situação       │     Newton     │           Einstein            │
+  ├──────────────────────┼────────────────┼───────────────────────────────┤
+  │ Maçã caindo          │ Correto        │ Correto                       │
+  ├──────────────────────┼────────────────┼───────────────────────────────┤
+  │ Órbita Mercúrio      │ Erro pequeno   │ Correto                       │
+  ├──────────────────────┼────────────────┼───────────────────────────────┤
+  │ GPS satellites       │ Erro acumulado │ Correto (correção necessária) │
+  ├──────────────────────┼────────────────┼───────────────────────────────┤
+  │ Buracos negros       │ Quebra         │ Funciona                      │
+  ├──────────────────────┼────────────────┼───────────────────────────────┤
+  │ Ondas gravitacionais │ Não prevê      │ Prevê (LIGO confirmou 2015)   │
+  └──────────────────────┴────────────────┴───────────────────────────────┘
+
+  ---
+  Questão aberta:
+
+  Einstein descreve gravidade como geometria. Modelo Padrão descreve outras
+  forças via partículas (fótons, bósons W/Z, glúons). Graviton = partícula
+  hipotética da gravidade — nunca detectada. Unificar relatividade geral com
+  mecânica quântica = maior problema em aberto na física.
+
+❯ /context                                                                      
+  ⎿  Context Usage
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛀ ⛁   Sonnet 4.6
+                           claude-sonnet-4-6
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛶ ⛶ ⛶ ⛶ ⛶   27.4k/200k tokens (14%)
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   Estimated usage by category
+                           ⛁ System prompt: 7k tokens (3.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ System tools: 8k tokens (4.0%)
+                           ⛁ Memory files: 60 tokens (0.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ Skills: 938 tokens (0.5%)
+                           ⛁ Messages: 11.8k tokens (5.9%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛶ Free space: 139.2k (69.6%)
+                           ⛝ Autocompact buffer: 33k tokens (16.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     MCP tools · /mcp (loaded on-demand)
+
+     Available
+     └ mcp__claude_ai_Google_Drive__authenticate
+
+     Memory files · /memory
+     └ .claude/projects/-Users-rodrigo/memory/MEMORY.md: 60 tokens
+
+     Skills · /skills
+
+     User
+     └ android-cli: 43 tokens
+
+     Plugin
+     └ caveman: 102 tokens
+     └ caveman-commit: 92 tokens
+     └ compress: 88 tokens
+     └ caveman-review: 83 tokens
+     └ caveman-help: 54 tokens
+
+❯ /caveman:caveman                                                              
+
+⏺ Caveman mode já ativo desde início da sessão. Nada mudou.
