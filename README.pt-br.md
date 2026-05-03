@@ -181,6 +181,9 @@ Só são adicionadas quando o suporte é confirmado. Veja [BADGES.md](BADGES.md)
 - **[FrancyJGLisboa/agent-skill-creator](https://github.com/FrancyJGLisboa/agent-skill-creator)** ![open source](https://img.shields.io/badge/open_source-0EA5E9?style=flat)  
   > Transforma qualquer workflow em SKILL.md instalável em 14+ ferramentas
 
+- **[JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman)** ![open source](https://img.shields.io/badge/open_source-0EA5E9?style=flat) ![claude](https://img.shields.io/badge/claude-D97706?style=flat)  
+  > Plugin para Claude Code que comprime as respostas da IA para reduzir uso de tokens e tamanho do contexto
+
 ---
 
 ## 💻 AI Coding Assistants

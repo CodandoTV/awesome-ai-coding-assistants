@@ -1,0 +1,548 @@
+╭─── Claude Code v2.1.92 ──────────────────────────────────────────────────────╮
+│                                                    │ Tips for getting        │
+│                Welcome back Junior!                │ started                 │
+│                                                    │ Run /init to create a … │
+│                       ▐▛███▜▌                      │ ─────────────────────── │
+│                      ▝▜█████▛▘                     │ Recent activity         │
+│                        ▘▘ ▝▝                       │ No recent activity      │
+│   Sonnet 4.6 · Claude Pro · jr.dvtx@gmail.com's    │                         │
+│   Organization                                     │                         │
+│               ~/rep/Netflix-Android                │                         │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+❯ /context                                                                      
+  ⎿  Context Usage
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛀ ⛀   Sonnet 4.6
+                           claude-sonnet-4-6
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   15.4k/200k tokens (8%)
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   Estimated usage by category
+                           ⛁ System prompt: 6.4k tokens (3.2%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ System tools: 8.4k tokens (4.2%)
+                           ⛁ Memory files: 47 tokens (0.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ Skills: 519 tokens (0.3%)
+                           ⛁ Messages: 8 tokens (0.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛶ Free space: 151.6k (75.8%)
+                           ⛝ Autocompact buffer: 33k tokens (16.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     MCP tools · /mcp (loaded on-demand)
+
+     Available
+     └ mcp__claude_ai_Google_Drive__authenticate
+     └ mcp__ide__getDiagnostics
+
+     Memory files · /memory
+     └                                                                      47 
+     tokens
+     ~/.claude/projects/-Users-rodrigo-rep-Netflix-Android/memory/MEMORY.md:
+
+     Skills · /skills
+
+     User
+     └ android-cli: 43 tokens
+
+❯ Por que o app pode estar lento ao carregar a lista de streams?                
+
+⏺ Explore(Explore stream list loading code)
+  ⎿  Done (56 tool uses · 56.5k tokens · 1m 30s)
+  (ctrl+o to expand)
+
+⏺ Aqui estão os principais motivos pelos quais o app pode estar lento ao
+  carregar a lista de streams:
+
+  ---
+  Problemas de Performance Identificados
+
+  1. verticalScroll em vez de LazyColumn (Alto Impacto)
+
+  ListStreamsScreen.kt
+
+  A tela usa um Column com verticalScroll para renderizar todos os carrosséis.
+  Isso significa que todos os carrosséis são compostos ao mesmo tempo, mesmo os
+  que estão fora da tela. Um LazyColumn resolveria isso com reciclagem de views.
+
+  ---
+  2. Múltiplas requisições paralelas por gênero (Alto Impacto)
+
+  ListStreamViewModel.kt:104-117
+
+  Cada gênero cria um PagingFlow independente com .cachedIn(viewModelScope). Se
+  houver 10 gêneros, 10 requisições de rede disparam simultaneamente no startup
+  — congestionamento de rede e lag na UI.
+
+  ---
+  3. getRefreshKey() retorna null (Alto Impacto)
+
+  StreamDataSource.kt:39
+
+  override fun getRefreshKey(...): Int? = null
+
+  Isso faz o paging recomeçar do início em rotação de tela ou pull-to-refresh,
+  invalidando o cache e gerando novas requisições desnecessárias.
+
+  ---
+  4. Search sem paginação (Alto Impacto)
+
+  SearchScreen.kt:114-135
+
+  Os resultados de busca são renderizados em um Column com .map() direto — sem
+  LazyColumn, sem paginação. Com muitos resultados, o consumo de memória é
+  ilimitado.
+
+  ---
+  5. maxSize = 500 no PagingConfig (Médio Impacto)
+
+  ListStreamRepository.kt
+
+  500 itens por carrossel × múltiplos gêneros = muita pressão de memória em
+  dispositivos com pouca RAM.
+
+  ---
+  Nota Positiva
+
+  A modificação em ListSearchStreamResponse.kt (visível no git status) que
+  adiciona @Immutable é uma melhoria — evita recomposições desnecessárias no
+  Compose.
+
+  ---
+  O maior ganho imediato seria substituir o Column + verticalScroll por
+  LazyColumn na ListStreamsScreen e adiar o carregamento dos carrosséis fora da
+  viewport.
+
+✻ Crunched for 1m 49s
+
+❯ /context                                                                      
+  ⎿  Context Usage
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛀ ⛁   Sonnet 4.6
+                           claude-sonnet-4-6
+     ⛁ ⛀ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   20.2k/200k tokens (10%)
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   Estimated usage by category
+                           ⛁ System prompt: 6.4k tokens (3.2%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ System tools: 8.4k tokens (4.2%)
+                           ⛁ Memory files: 47 tokens (0.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ Skills: 519 tokens (0.3%)
+                           ⛁ Messages: 5.2k tokens (2.6%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛶ Free space: 146.4k (73.2%)
+                           ⛝ Autocompact buffer: 33k tokens (16.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     MCP tools · /mcp (loaded on-demand)
+
+     Available
+     └ mcp__claude_ai_Google_Drive__authenticate
+     └ mcp__ide__getDiagnostics
+
+     Memory files · /memory
+     └                                                                      47 
+     tokens
+     ~/.claude/projects/-Users-rodrigo-rep-Netflix-Android/memory/MEMORY.md:
+
+     Skills · /skills
+
+     User
+     └ android-cli: 43 tokens
+
+❯ Como garantir que o estado da busca não vaza entre diferentes ciclos de vida  
+da Activity?                                                                    
+
+  Searched for 1 pattern, read 3 files (ctrl+o to expand)
+
+⏺ Encontrei três problemas concretos no código. Vou descrever cada um com o
+  trecho relevante:
+
+  ---
+  1. Coroutines concorrentes sem cancelamento (Race condition)
+
+  SearchViewModel.kt:50 e :72
+
+  Cada chamada a fetchMovieByQuery() ou fetchMostPopularMovies() lança um novo
+  viewModelScope.launch sem cancelar o anterior. Se o usuário digitar rápido,
+  várias coroutines ficam vivas simultaneamente atualizando _uiState em ordem
+  imprevisível.
+
+  Solução: usar um Job cancelável ou migrar para flatMapLatest:
+
+  private var searchJob: Job? = null
+
+  private fun fetchMovieByQuery() {
+      searchJob?.cancel()
+      searchJob = viewModelScope.launch {
+          searchUseCase(query = _currentSearchText.value)
+              .onStart { showLoading() }
+              .catchFailure { showError(it.errorMessage.orEmpty()) }
+              .collect { result -> _uiState.update { ... } }
+      }
+  }
+
+  ---
+  2. collectAsState() não respeita lifecycle
+
+  SearchScreen.kt:90
+
+  val currentText by viewModel.currentSearchText.collectAsState() // ← errado
+
+  Enquanto uiState usa collectAsStateWithLifecycle() (linha 41), o
+  currentSearchText usa collectAsState() — que continua coletando mesmo com o
+  app em background. Deve ser consistente:
+
+  val currentText by viewModel.currentSearchText.collectAsStateWithLifecycle()
+
+  ---
+  3. SharingStarted.Eagerly mantém o flow ativo para sempre
+
+  SearchViewModel.kt:26-30
+
+  val uiState = _uiState.stateIn(
+      scope = viewModelScope,
+      started = SharingStarted.Eagerly, // ← nunca pausa
+      initialValue = _uiState.value
+  )
+
+  Eagerly inicia o compartilhamento imediatamente e nunca suspende, mesmo quando
+   nenhuma tela está coletando. Para busca, o ideal é WhileSubscribed com um
+  timeout curto para sobreviver a rotações de tela:
+
+  started = SharingStarted.WhileSubscribed(5_000)
+
+  ---
+  4. DefaultLifecycleObserver implementado mas nunca registrado
+
+  SearchViewModel.kt:21
+
+  class SearchViewModel(...) : ViewModel(), DefaultLifecycleObserver
+
+  A interface está implementada mas nenhum método (onStop, onDestroy, etc.) é
+  sobrescrito, e o ViewModel nunca é registrado via
+  lifecycle.addObserver(viewModel). É código morto que gera falsa sensação de
+  que o ciclo de vida está sendo tratado.
+
+  ---
+  Resumo das correções
+
+  ┌─────────────────────┬────────────────┬──────┬──────────────────────────┐
+  │      Problema       │    Arquivo     │ Linh │           Fix            │
+  │                     │                │  a   │                          │
+  ├─────────────────────┼────────────────┼──────┼──────────────────────────┤
+  │ Jobs concorrentes   │ SearchViewMode │ 50,  │ Cancelar job anterior    │
+  │                     │ l.kt           │ 72   │ antes de lançar novo     │
+  ├─────────────────────┼────────────────┼──────┼──────────────────────────┤
+  │ collectAsState()    │ SearchScreen.k │ 90   │ Trocar por collectAsStat │
+  │                     │ t              │      │ eWithLifecycle()         │
+  ├─────────────────────┼────────────────┼──────┼──────────────────────────┤
+  │ SharingStarted.Eage │ SearchViewMode │ 27   │ Usar                     │
+  │ rly                 │ l.kt           │      │ WhileSubscribed(5_000)   │
+  ├─────────────────────┼────────────────┼──────┼──────────────────────────┤
+  │ DefaultLifecycleObs │ SearchViewMode │ 21   │ Remover a interface ou   │
+  │ erver fantasma      │ l.kt           │      │ implementar de verdade   │
+  └─────────────────────┴────────────────┴──────┴──────────────────────────┘
+
+✻ Churned for 36s
+
+❯ /context                                                                      
+  ⎿  Context Usage
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛀ ⛁   Sonnet 4.6
+                           claude-sonnet-4-6
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛶ ⛶ ⛶ ⛶   27.1k/200k tokens (14%)
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   Estimated usage by category
+                           ⛁ System prompt: 6.4k tokens (3.2%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ System tools: 8.4k tokens (4.2%)
+                           ⛁ Memory files: 47 tokens (0.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ Skills: 519 tokens (0.3%)
+                           ⛁ Messages: 13.1k tokens (6.6%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛶ Free space: 138.5k (69.2%)
+                           ⛝ Autocompact buffer: 33k tokens (16.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     MCP tools · /mcp (loaded on-demand)
+
+     Available
+     └ mcp__claude_ai_Google_Drive__authenticate
+     └ mcp__ide__getDiagnostics
+
+     Memory files · /memory
+     └                                                                      47 
+     tokens
+     ~/.claude/projects/-Users-rodrigo-rep-Netflix-Android/memory/MEMORY.md:
+
+     Skills · /skills
+
+     User
+     └ android-cli: 43 tokens
+
+❯ Por que a busca pode estar retornando resultados desatualizados após o        
+usuário digitar rápido?                                                         
+
+⏺ Isso é exatamente o problema do item 1 que identifiquei antes. O código em
+  SearchViewModel.kt deixa o mecanismo claro:
+
+  // linha 47-66
+  private fun fetchMovieByQuery() {
+      tryAgain = ::fetchMovieByQuery
+
+      viewModelScope.launch {          // ← novo job lançado
+          searchUseCase(query = _currentSearchText.value)  // ← captura o texto 
+  AGORA
+              .onStart { showLoading() }
+              .collect { result ->
+                  _uiState.update { ... }  // ← atualiza quando chegar
+              }
+      }
+  }
+
+  O problema: fetchMovies() (linha 39) é chamado a cada busca, lançando um novo
+  launch sem cancelar o anterior. Com digitação rápida:
+
+  usuário digita "ba"  → Job A lançado, query = "ba"
+  usuário digita "bat" → Job B lançado, query = "bat"  (Job A ainda vivo)
+  usuário digita "batm" → Job C lançado, query = "batm" (Jobs A e B ainda vivos)
+
+  Chegada das respostas (rede é imprevisível):
+    Job C responde primeiro  → UI mostra "batm" ✓
+    Job A responde por último → UI mostra "ba"  ✗  ← resultado desatualizado
+
+  ---
+  Correção com flatMapLatest
+
+  A solução idiomática em Kotlin é combinar o StateFlow do texto com
+  flatMapLatest — que cancela automaticamente a busca anterior quando o texto
+  muda:
+
+  // Em vez de lançar jobs manualmente, reativa o flow quando o texto muda
+  val uiState: StateFlow<SearchUIState> = _currentSearchText
+      .debounce(300L)                         // evita disparar a cada tecla
+      .filter { it.isNotBlank() }
+      .flatMapLatest { query ->               // cancela a busca anterior
+          searchUseCase(query = query)
+              .map { result ->
+                  if (result.results.isEmpty()) SearchUIState.Empty
+                  else SearchUIState.Success(result)
+              }
+              .onStart { emit(SearchUIState.Loading) }
+              .catch { emit(SearchUIState.Error(it.message.orEmpty())) }
+      }
+      .stateIn(
+          scope = viewModelScope,
+          started = SharingStarted.WhileSubscribed(5_000),
+          initialValue = SearchUIState.Loading
+      )
+
+  Com isso:
+  - debounce(300) evita requisição a cada tecla
+  - flatMapLatest garante que só a busca mais recente fica ativa
+  - Elimina a necessidade de gerenciar Job manualmente e o campo tryAgain
+
+  O fetchMovies(), fetchMovieByQuery(), e fetchMostPopularMovies() seriam
+  substituídos por esse pipeline declarativo.
+
+❯ /context                                                                      
+  ⎿  Context Usage
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛀ ⛁   Sonnet 4.6
+                           claude-sonnet-4-6
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛶ ⛶ ⛶   30k/200k tokens (15%)
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   Estimated usage by category
+                           ⛁ System prompt: 6.4k tokens (3.2%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ System tools: 8.4k tokens (4.2%)
+                           ⛁ Memory files: 47 tokens (0.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ Skills: 519 tokens (0.3%)
+                           ⛁ Messages: 15.3k tokens (7.6%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛶ Free space: 136.3k (68.2%)
+                           ⛝ Autocompact buffer: 33k tokens (16.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     MCP tools · /mcp (loaded on-demand)
+
+     Available
+     └ mcp__claude_ai_Google_Drive__authenticate
+     └ mcp__ide__getDiagnostics
+
+     Memory files · /memory
+     └                                                                      47 
+     tokens
+     ~/.claude/projects/-Users-rodrigo-rep-Netflix-Android/memory/MEMORY.md:
+
+     Skills · /skills
+
+     User
+     └ android-cli: 43 tokens
+
+❯ Faça um code review da classe                                                 
+@feature-list-streams/src/main/java/com/codandotv/streamplayerapp/feature_list_ 
+streams/list/presentation/screens/ListStreamsScreen.kt                          
+  ⎿  Read feature-list-streams/src/main/java/com/codandotv/streamplayerapp/featu
+     re_list_streams/list/presentation/screens/ListStreamsScreen.kt (108 lines)
+
+⏺ Com o arquivo já lido, aqui está o review:
+
+  ---
+  Code Review — ListStreamsScreen.kt
+
+  1. @SuppressLint desnecessário (linha 38)
+
+  @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
+
+  paddingValues é usado na linha 70 (Modifier.padding(paddingValues)). A
+  anotação é um resíduo de código antigo e deve ser removida.
+
+  ---
+  2. Imports mortos (linhas 20 e 25)
+
+  import androidx.compose.runtime.DisposableEffect   // não usado
+  import androidx.compose.ui.platform.LocalLifecycleOwner // não usado
+
+  Indicam que código foi removido sem limpar os imports. Podem ser deletados.
+
+  ---
+  3. Column + verticalScroll em vez de LazyColumn (linhas 81–97)
+
+  Column(
+      modifier = Modifier
+          .fillMaxSize()
+          .verticalScroll(baseScrollState)   // compõe tudo de uma vez
+  ) {
+      HighlightBanner(...)           // 500dp de imagem
+      forEach { StreamsCarousel(...) } // todos os carrosséis compostos
+  }
+
+  Todos os carrosséis são compostos simultaneamente, mesmo os fora da tela. Com
+  LazyColumn, apenas os itens visíveis seriam compostos. Este é o principal
+  problema de performance da tela.
+
+  ---
+  4. nestedScroll + verticalScroll — interação frágil (linhas 51–55 e 85)
+
+  val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior(...)
+  // ...
+  Scaffold(modifier =
+  Modifier.nestedScroll(scrollBehavior.nestedScrollConnection))
+  // ...
+  Column(modifier = Modifier.verticalScroll(baseScrollState)) // propaga via 
+  nested scroll
+
+  O scrollBehavior depende de eventos de nested scroll vindos do Column. Com a
+  migração para LazyColumn, esse vínculo fica mais explícito e correto via
+  nestedScrollConnection diretamente no LazyColumn.
+
+  ---
+  5. @Suppress("LongParameterList") (linha 37)
+
+  @Suppress("LongParameterList")
+  fun ListStreamsScreen(
+      viewModel, navController, onNavigateDetailList,
+      onNavigateProfilePicker, onNavigateSearchScreen, profilePicture
+  )
+
+  Suprimir em vez de resolver. profilePicture: String poderia vir do próprio
+  ViewModel (já que o ViewModel conhece o estado do usuário), reduzindo o número
+   de parâmetros e eliminando a necessidade do suppress.
+
+  ---
+  6. Preview quebra em runtime com Koin (linhas 103–107)
+
+  @Composable
+  fun ListStreamsScreenPreview() {
+      ListStreamsScreen(navController = rememberNavController(), profilePicture
+  = "")
+      // koinViewModel() chamado sem contexto Koin → crash no Android Studio
+  }
+
+  O preview não funciona porque koinViewModel() precisa do contexto Koin
+  inicializado. O correto é separar a composição do estado da UI:
+
+  // Extrair um ListStreamsContent(@Preview-friendly) sem ViewModel
+  @Composable
+  fun ListStreamsContent(uiState: ListStreamUIState, ...) { ... }
+
+  @Preview
+  @Composable
+  fun ListStreamsScreenPreview() {
+      ListStreamsContent(uiState = ListStreamUIState.mock(), ...)
+  }
+
+  ---
+  Resumo
+
+  ┌────────────┬───────────────────────────────────────────────────┬─────────┐
+  │ Severidade │                     Problema                      │  Linha  │
+  ├────────────┼───────────────────────────────────────────────────┼─────────┤
+  │ Alta       │ Column + verticalScroll sem lazy loading          │ 81–97   │
+  ├────────────┼───────────────────────────────────────────────────┼─────────┤
+  │ Média      │ @SuppressLint incorreto (parâmetro é usado)       │ 38      │
+  ├────────────┼───────────────────────────────────────────────────┼─────────┤
+  │ Média      │ Preview quebrado com koinViewModel()              │ 103–107 │
+  ├────────────┼───────────────────────────────────────────────────┼─────────┤
+  │ Média      │ profilePicture deveria vir do ViewModel           │ 47      │
+  ├────────────┼───────────────────────────────────────────────────┼─────────┤
+  │ Baixa      │ Imports mortos (DisposableEffect,                 │ 20, 25  │
+  │            │ LocalLifecycleOwner)                              │         │
+  ├────────────┼───────────────────────────────────────────────────┼─────────┤
+  │ Baixa      │ @Suppress("LongParameterList") cobrindo design    │ 37      │
+  │            │ smell                                             │         │
+  └────────────┴───────────────────────────────────────────────────┴─────────┘
+
+✻ Worked for 32s
+
+❯ /context                                                                      
+  ⎿  Context Usage
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛀ ⛁   Sonnet 4.6
+                           claude-sonnet-4-6
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛶   33.7k/200k tokens (17%)
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   Estimated usage by category
+                           ⛁ System prompt: 6.4k tokens (3.2%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ System tools: 8.4k tokens (4.2%)
+                           ⛁ Memory files: 47 tokens (0.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ Skills: 519 tokens (0.3%)
+                           ⛁ Messages: 20k tokens (10.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛶ Free space: 131.6k (65.8%)
+                           ⛝ Autocompact buffer: 33k tokens (16.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     MCP tools · /mcp (loaded on-demand)
+
+     Available
+     └ mcp__claude_ai_Google_Drive__authenticate
+     └ mcp__ide__getDiagnostics
+
+     Memory files · /memory
+     └                                                                      47 
+     tokens
+     ~/.claude/projects/-Users-rodrigo-rep-Netflix-Android/memory/MEMORY.md:
+
+     Skills · /skills
+
+     User
+     └ android-cli: 43 tokens

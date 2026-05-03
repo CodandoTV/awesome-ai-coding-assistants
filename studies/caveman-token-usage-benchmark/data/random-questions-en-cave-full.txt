@@ -1,0 +1,535 @@
+▗ ▗   ▖ ▖  Claude Code v2.1.92
+           Sonnet 4.6 · Claude Pro
+  ▘▘ ▝▝    /Users/rodrigo
+
+❯ /caveman:caveman                                                              
+
+⏺ Caveman mode active (full).
+
+  Statusline badge not configured. Want me to add it to settings.json?
+
+❯ /context                                                                      
+  ⎿  Context Usage
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛀ ⛁   Sonnet 4.6
+                           claude-sonnet-4-6
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   18.6k/200k tokens (9%)
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   Estimated usage by category
+                           ⛁ System prompt: 7k tokens (3.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ System tools: 8k tokens (4.0%)
+                           ⛁ Memory files: 60 tokens (0.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ Skills: 938 tokens (0.5%)
+                           ⛁ Messages: 2.5k tokens (1.3%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛶ Free space: 148.5k (74.3%)
+                           ⛝ Autocompact buffer: 33k tokens (16.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     MCP tools · /mcp (loaded on-demand)
+
+     Available
+     └ mcp__claude_ai_Google_Drive__authenticate
+
+     Memory files · /memory
+     └ .claude/projects/-Users-rodrigo/memory/MEMORY.md: 60 tokens
+
+     Skills · /skills
+
+     User
+     └ android-cli: 43 tokens
+
+     Plugin
+     └ caveman: 102 tokens
+     └ caveman-commit: 92 tokens
+     └ compress: 88 tokens
+     └ caveman-review: 83 tokens
+     └ caveman-help: 54 tokens
+
+❯ How does sleep work? Why do we need to sleep?                                 
+
+⏺ Brain cycles through 4-5 sleep stages (~90 min each):
+
+  - NREM 1-2: Light sleep, memory consolidation begins
+  - NREM 3 (deep/slow-wave): Cell repair, immune function, growth hormone
+  release
+  - REM: Dream state, emotional processing, memory integration
+
+  Why needed:
+
+  - Memory: Hippocampus replays experiences → transfers to long-term cortex
+  storage
+  - Waste clearance: Glymphatic system flushes neurotoxins (amyloid-beta, tau) —
+   only works during sleep
+  - Metabolic repair: Protein synthesis, tissue repair, glucose regulation reset
+  - Immune: Cytokine production peaks during sleep
+  - Synaptic homeostasis: Brain prunes weak synapses, strengthens important ones
+
+  Skip sleep → cascade failure: cognition drops, immune weakens, cardiovascular
+  risk rises, metabolic dysregulation. Chronic deprivation linked to Alzheimer's
+   (toxin buildup).
+
+  No species found yet that doesn't sleep. Evolutionary pressure to remain
+  unconscious and vulnerable = benefit must be enormous.
+
+❯ /context                                                                      
+  ⎿  Context Usage
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛀ ⛁   Sonnet 4.6
+                           claude-sonnet-4-6
+     ⛁ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   20.1k/200k tokens (10%)
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   Estimated usage by category
+                           ⛁ System prompt: 7k tokens (3.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ System tools: 8k tokens (4.0%)
+                           ⛁ Memory files: 60 tokens (0.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ Skills: 938 tokens (0.5%)
+                           ⛁ Messages: 4.2k tokens (2.1%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛶ Free space: 146.8k (73.4%)
+                           ⛝ Autocompact buffer: 33k tokens (16.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     MCP tools · /mcp (loaded on-demand)
+
+     Available
+     └ mcp__claude_ai_Google_Drive__authenticate
+
+     Memory files · /memory
+     └ .claude/projects/-Users-rodrigo/memory/MEMORY.md: 60 tokens
+
+     Skills · /skills
+
+     User
+     └ android-cli: 43 tokens
+
+     Plugin
+     └ caveman: 102 tokens
+     └ caveman-commit: 92 tokens
+     └ compress: 88 tokens
+     └ caveman-review: 83 tokens
+     └ caveman-help: 54 tokens
+
+❯ How does human memory work? Why do we forget things?                          
+
+⏺ Memory formation: 3 stages
+
+  1. Encoding — sensory input → electrical pattern in neurons. Attention gates
+  this: no attention = no encoding
+  2. Consolidation — pattern stabilizes via protein synthesis. Sleep critical
+  here (hippocampus replays → cortex)
+  3. Retrieval — reactivate pattern. Each retrieval slightly rewrites memory
+  (reconsolidation)
+
+  Storage types:
+
+  - Working memory: ~4 items, seconds-long, prefrontal cortex
+  - Episodic: personal events, hippocampus-dependent
+  - Semantic: facts/concepts, distributed cortex
+  - Procedural: skills, basal ganglia + cerebellum — most durable
+
+  Why forget:
+
+  - Decay: unused neural connections weaken (synaptic pruning)
+  - Interference: similar memories compete — new overwrites old (retroactive),
+  old blocks new (proactive)
+  - Retrieval failure: memory exists but no cue to access it (tip-of-tongue
+  phenomenon)
+  - Motivated forgetting: emotional trauma → active suppression
+  - Encoding failure: never stored to begin with (most "forgetting" is this)
+
+  Key insight: forgetting isn't bug — it's feature. Brain discards low-signal
+  data to reduce noise, improve pattern recognition, prevent interference.
+  Borges' "Funes the Memorious" — perfect memory = cognitive paralysis.
+
+  Hippocampus damage (Alzheimer's, H.M. case) → can't form new episodic memories
+   but old procedural skills intact. Different systems, different
+  vulnerabilities.
+
+❯ /context                                                                      
+  ⎿  Context Usage
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛀ ⛁   Sonnet 4.6
+                           claude-sonnet-4-6
+     ⛁ ⛁ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   21.8k/200k tokens (11%)
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   Estimated usage by category
+                           ⛁ System prompt: 7k tokens (3.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ System tools: 8k tokens (4.0%)
+                           ⛁ Memory files: 60 tokens (0.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ Skills: 938 tokens (0.5%)
+                           ⛁ Messages: 6.1k tokens (3.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛶ Free space: 145k (72.5%)
+                           ⛝ Autocompact buffer: 33k tokens (16.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     MCP tools · /mcp (loaded on-demand)
+
+     Available
+     └ mcp__claude_ai_Google_Drive__authenticate
+
+     Memory files · /memory
+     └ .claude/projects/-Users-rodrigo/memory/MEMORY.md: 60 tokens
+
+     Skills · /skills
+
+     User
+     └ android-cli: 43 tokens
+
+     Plugin
+     └ caveman: 102 tokens
+     └ caveman-commit: 92 tokens
+     └ compress: 88 tokens
+     └ caveman-review: 83 tokens
+     └ caveman-help: 54 tokens
+
+❯ Why is the sky blue during the day and orange/red at sunset?                  
+
+⏺ Rayleigh scattering.
+
+  Sunlight = all wavelengths mixed. Atmosphere full of N₂/O₂ molecules much
+  smaller than light wavelengths.
+
+  Scattering intensity ∝ 1/λ⁴ — shorter wavelength scatters far more.
+
+  - Blue (~450nm) scatters ~5.5× more than red (~700nm)
+  - Blue bounces in all directions across sky → eye sees blue from everywhere
+  overhead
+  - Red/green scatter less → pass through mostly straight
+
+  Why sunset orange/red:
+
+  Light path through atmosphere at horizon = much longer (tangential slice vs
+  overhead). Blue fully scattered away before reaching eye. Only long-wavelength
+   red/orange survives full journey.
+
+  Clean air → yellow-orange sunset. Dust/smoke/humidity particles scatter
+  mid-wavelengths too → deeper red, sometimes purple.
+
+  Why not violet? Violet scatters even more than blue. Two reasons sky isn't
+  violet:
+  1. Sun emits less violet to begin with
+  2. Human eye less sensitive to violet
+  3. Some violet absorbed upper atmosphere
+
+  Net result: brain perceives blue.
+
+❯ /context                                                                      
+  ⎿  Context Usage
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛀ ⛁   Sonnet 4.6
+                           claude-sonnet-4-6
+     ⛁ ⛁ ⛁ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   23.6k/200k tokens (12%)
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   Estimated usage by category
+                           ⛁ System prompt: 7k tokens (3.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ System tools: 8k tokens (4.0%)
+                           ⛁ Memory files: 60 tokens (0.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ Skills: 938 tokens (0.5%)
+                           ⛁ Messages: 7.7k tokens (3.9%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛶ Free space: 143.3k (71.7%)
+                           ⛝ Autocompact buffer: 33k tokens (16.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     MCP tools · /mcp (loaded on-demand)
+
+     Available
+     └ mcp__claude_ai_Google_Drive__authenticate
+
+     Memory files · /memory
+     └ .claude/projects/-Users-rodrigo/memory/MEMORY.md: 60 tokens
+
+     Skills · /skills
+
+     User
+     └ android-cli: 43 tokens
+
+     Plugin
+     └ caveman: 102 tokens
+     └ caveman-commit: 92 tokens
+     └ compress: 88 tokens
+     └ caveman-review: 83 tokens
+     └ caveman-help: 54 tokens
+
+❯ How does a vaccine work? Why does it protect against diseases?                
+
+⏺ Core idea: train immune system cheaply before real threat.
+
+  Immune system basics:
+  - First infection → immune takes 1-2 weeks to build response, you get sick
+  - After → memory B/T cells persist for years, recognize pathogen fast
+  - Second exposure → response in hours, killed before symptoms
+
+  Vaccine = fake first exposure.
+
+  Introduce antigen (piece of pathogen) without danger:
+
+  ┌─────────────────┬──────────────────────────────┬─────────────────────────┐
+  │      Type       │        What injected         │         Example         │
+  ├─────────────────┼──────────────────────────────┼─────────────────────────┤
+  │ Live-attenuated │ Weakened pathogen            │ MMR, chickenpox         │
+  ├─────────────────┼──────────────────────────────┼─────────────────────────┤
+  │ Inactivated     │ Dead pathogen                │ Flu shot, polio (Salk)  │
+  ├─────────────────┼──────────────────────────────┼─────────────────────────┤
+  │ Subunit         │ Protein pieces only          │ Hep B, HPV              │
+  ├─────────────────┼──────────────────────────────┼─────────────────────────┤
+  │ mRNA            │ Instructions to make protein │ COVID-19 Pfizer/Moderna │
+  ├─────────────────┼──────────────────────────────┼─────────────────────────┤
+  │ Viral vector    │ Virus carrying antigen gene  │ COVID-19 J&J            │
+  └─────────────────┴──────────────────────────────┴─────────────────────────┘
+
+  What happens after injection:
+  1. Antigen-presenting cells (dendritic cells) grab fragments
+  2. Present to T cells → helper T cells activate
+  3. B cells → produce antibodies specific to antigen
+  4. Memory B + T cells formed → persist
+
+  Why protection:
+  - Antibodies neutralize pathogen directly (block binding)
+  - Cytotoxic T cells kill infected cells
+  - Memory cells = fast recall response on real exposure
+
+  Herd immunity: enough vaccinated → pathogen can't find new hosts → chain of
+  transmission breaks → even unvaccinated protected.
+
+  mRNA vaccines don't alter DNA. mRNA never enters nucleus, degrades in days.
+  Ribosomes read it → make spike protein → immune responds → mRNA gone.
+
+❯ /context                                                                      
+  ⎿  Context Usage
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛀ ⛁   Sonnet 4.6
+                           claude-sonnet-4-6
+     ⛁ ⛁ ⛁ ⛁ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   25.3k/200k tokens (13%)
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   Estimated usage by category
+                           ⛁ System prompt: 7k tokens (3.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ System tools: 8k tokens (4.0%)
+                           ⛁ Memory files: 60 tokens (0.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ Skills: 938 tokens (0.5%)
+                           ⛁ Messages: 9.5k tokens (4.8%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛶ Free space: 141.5k (70.8%)
+                           ⛝ Autocompact buffer: 33k tokens (16.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     MCP tools · /mcp (loaded on-demand)
+
+     Available
+     └ mcp__claude_ai_Google_Drive__authenticate
+
+     Memory files · /memory
+     └ .claude/projects/-Users-rodrigo/memory/MEMORY.md: 60 tokens
+
+     Skills · /skills
+
+     User
+     └ android-cli: 43 tokens
+
+     Plugin
+     └ caveman: 102 tokens
+     └ caveman-commit: 92 tokens
+     └ compress: 88 tokens
+     └ caveman-review: 83 tokens
+     └ caveman-help: 54 tokens
+
+❯ Why do we feel hungry? How does the body know it needs food?                  
+
+⏺ Hunger = multi-system signal, not just empty stomach.
+
+  Key hormones:
+
+  ┌───────────┬────────────────┬────────────────────────────────────────────┐
+  │  Hormone  │     Source     │                   Effect                   │
+  ├───────────┼────────────────┼────────────────────────────────────────────┤
+  │ Ghrelin   │ Stomach        │ Rises when empty → signals hypothalamus →  │
+  │           │                │ hunger                                     │
+  ├───────────┼────────────────┼────────────────────────────────────────────┤
+  │ Leptin    │ Fat cells      │ Rises with fat stores → suppresses hunger  │
+  ├───────────┼────────────────┼────────────────────────────────────────────┤
+  │ Insulin   │ Pancreas       │ Post-meal → suppresses appetite            │
+  ├───────────┼────────────────┼────────────────────────────────────────────┤
+  │ CCK       │ Small          │ Released when food arrives → "stop eating" │
+  │           │ intestine      │                                            │
+  ├───────────┼────────────────┼────────────────────────────────────────────┤
+  │ PYY/GLP-1 │ Gut            │ Post-meal satiety signals                  │
+  └───────────┴────────────────┴────────────────────────────────────────────┘
+
+  Blood glucose role:
+  - Glucose drops → glucostatic receptors in hypothalamus detect → hunger signal
+  - Eat → glucose rises → insulin spikes → hunger suppressed
+
+  Hypothalamus = master controller:
+  - Arcuate nucleus has two opposing neuron populations:
+    - NPY/AgRP neurons: fire when hungry, drive eating
+    - POMC neurons: fire when fed, suppress eating
+  - Leptin/ghrelin/insulin all converge here
+
+  Why hunger feels urgent:
+  - Ghrelin also triggers dopamine in reward circuits → food-seeking behavior,
+  not just discomfort
+  - Evolutionarily: missing meal = survival threat → brain treats it seriously
+
+  Why we eat past full:
+  - Satiety signals lag ~20 min behind actual intake (gut hormones need time)
+  - Palatability overrides satiety — reward circuits override homeostatic ones
+  - Stress elevates cortisol → increases appetite, especially for calorie-dense
+  food
+
+  Circadian component: ghrelin peaks on schedule even without eating. Body clock
+   anticipates meals — hunger partly trained by habit, not just deficit.
+
+❯ /context                                                                      
+  ⎿  Context Usage
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛀ ⛁   Sonnet 4.6
+                           claude-sonnet-4-6
+     ⛁ ⛁ ⛁ ⛁ ⛀ ⛶ ⛶ ⛶ ⛶ ⛶   27.1k/200k tokens (14%)
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   Estimated usage by category
+                           ⛁ System prompt: 7k tokens (3.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ System tools: 8k tokens (4.0%)
+                           ⛁ Memory files: 60 tokens (0.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ Skills: 938 tokens (0.5%)
+                           ⛁ Messages: 11.4k tokens (5.7%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛶ Free space: 139.7k (69.8%)
+                           ⛝ Autocompact buffer: 33k tokens (16.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     MCP tools · /mcp (loaded on-demand)
+
+     Available
+     └ mcp__claude_ai_Google_Drive__authenticate
+
+     Memory files · /memory
+     └ .claude/projects/-Users-rodrigo/memory/MEMORY.md: 60 tokens
+
+     Skills · /skills
+
+     User
+     └ android-cli: 43 tokens
+
+     Plugin
+     └ caveman: 102 tokens
+     └ caveman-commit: 92 tokens
+     └ compress: 88 tokens
+     └ caveman-review: 83 tokens
+     └ caveman-help: 54 tokens
+
+❯ How does gravity work? Why do objects fall?                                   
+
+⏺ Two answers: Newton (practical) vs Einstein (actual).
+
+  ---
+  Newton: force at distance
+
+  Every mass attracts every other mass:
+
+  F = G × (m₁ × m₂) / r²
+
+  - Works perfectly for engineering, orbits, everyday physics
+  - Explains how much but not why
+  - Treated gravity as mysterious action-at-a-distance
+
+  ---
+  Einstein: curved spacetime (GR, 1915)
+
+  Mass doesn't pull — mass warps spacetime geometry. Objects follow straightest
+  possible path (geodesic) through curved spacetime. That path curves toward
+  mass.
+
+  Analogy: heavy ball on rubber sheet creates depression. Nearby ball rolls
+  toward it — not because "attracted," but because geometry of sheet curves that
+   way.
+
+  Objects don't fall because pulled. They fall because straight-line path 
+  through curved spacetime points down.
+
+  Light bends near stars — confirmed 1919. No mass, still follows curved
+  geometry.
+
+  ---
+  Why Earth stays in orbit (not falls into Sun):
+  - Moving sideways fast enough that curved path = closed loop
+  - "Falling around" the Sun, never hitting
+
+  ---
+  What we still don't know:
+
+  - GR and quantum mechanics incompatible — gravity has no quantum theory yet
+  - Graviton (hypothetical carrier particle) never detected
+  - Dark matter: extra gravitational effect with no visible mass source
+  - Dark energy: gravity somehow losing to expansion at cosmic scale
+
+  GR confirmed to extraordinary precision — GPS satellites require GR
+  corrections or drift 10km/day. But at quantum scale, theory breaks. Still open
+   problem.
+
+❯ /context                                                                      
+  ⎿  Context Usage
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛀ ⛁   Sonnet 4.6
+                           claude-sonnet-4-6
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛶ ⛶ ⛶ ⛶   29k/200k tokens (14%)
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   Estimated usage by category
+                           ⛁ System prompt: 7k tokens (3.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ System tools: 8k tokens (4.0%)
+                           ⛁ Memory files: 60 tokens (0.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ Skills: 938 tokens (0.5%)
+                           ⛁ Messages: 13.2k tokens (6.6%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛶ Free space: 137.8k (68.9%)
+                           ⛝ Autocompact buffer: 33k tokens (16.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     MCP tools · /mcp (loaded on-demand)
+
+     Available
+     └ mcp__claude_ai_Google_Drive__authenticate
+
+     Memory files · /memory
+     └ .claude/projects/-Users-rodrigo/memory/MEMORY.md: 60 tokens
+
+     Skills · /skills
+
+     User
+     └ android-cli: 43 tokens
+
+     Plugin
+     └ caveman: 102 tokens
+     └ caveman-commit: 92 tokens
+     └ compress: 88 tokens
+     └ caveman-review: 83 tokens
+     └ caveman-help: 54 tokens

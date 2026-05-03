@@ -1,0 +1,647 @@
+▗ ▗   ▖ ▖  Claude Code v2.1.92
+           Sonnet 4.6 · Claude Pro
+  ▘▘ ▝▝    /Users/rodrigo
+
+❯ /context                                                                      
+  ⎿  Context Usage
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛀ ⛀   Sonnet 4.6
+                           claude-sonnet-4-6
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   16k/200k tokens (8%)
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   Estimated usage by category
+                           ⛁ System prompt: 7k tokens (3.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ System tools: 8.4k tokens (4.2%)
+                           ⛁ Memory files: 60 tokens (0.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ Skills: 519 tokens (0.3%)
+                           ⛁ Messages: 8 tokens (0.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛶ Free space: 151k (75.5%)
+                           ⛝ Autocompact buffer: 33k tokens (16.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     MCP tools · /mcp (loaded on-demand)
+
+     Available
+     └ mcp__claude_ai_Google_Drive__authenticate
+
+     Memory files · /memory
+     └ .claude/projects/-Users-rodrigo/memory/MEMORY.md: 60 tokens
+
+     Skills · /skills
+
+     User
+     └ android-cli: 43 tokens
+
+❯ Como funciona o sono? Por que precisamos dormir?                              
+
+⏺ Como funciona o sono?
+
+  O sono é controlado por dois sistemas principais:
+
+  1. Ritmo circadiano — um "relógio biológico" interno (no núcleo
+  supraquiasmático do hipotálamo) sincronizado com a luz. Conforme escurece, o
+  corpo libera melatonina, sinalizando que é hora de dormir.
+
+  2. Pressão homeostática — quanto mais tempo acordado, mais adenosina
+  (subproduto do metabolismo neuronal) se acumula no cérebro, aumentando a
+  "pressão" por sono. O sono a limpa.
+
+  ---
+  Fases do sono
+
+  O sono se repete em ciclos de ~90 min:
+
+  ┌──────────────┬──────────────────────────────────────────────────────────┐
+  │     Fase     │                      O que acontece                      │
+  ├──────────────┼──────────────────────────────────────────────────────────┤
+  │ N1/N2 (leve) │ Relaxamento, temperatura cai, frequência cardíaca reduz  │
+  ├──────────────┼──────────────────────────────────────────────────────────┤
+  │ N3           │ Reparação física, imunidade, crescimento tecidual        │
+  │ (profundo)   │                                                          │
+  ├──────────────┼──────────────────────────────────────────────────────────┤
+  │ REM          │ Sonhos intensos, consolidação de memórias, processamento │
+  │              │  emocional                                               │
+  └──────────────┴──────────────────────────────────────────────────────────┘
+
+  ---
+  Por que precisamos dormir?
+
+  - Limpeza cerebral — o sistema glinfático lava proteínas tóxicas (como
+  beta-amiloide, ligada ao Alzheimer) — isso ocorre principalmente no sono
+  profundo
+  - Consolidação de memória — o hipocampo "grava" aprendizados no córtex durante
+   o REM
+  - Regulação hormonal — GH (hormônio do crescimento), cortisol e insulina são
+  regulados durante o sono
+  - Imunidade — privação de sono reduz drasticamente a produção de células T
+  - Saúde mental — o REM processa emoções; sem ele, a amígdala fica hiperativa
+
+  ---
+  A privação crônica está associada a obesidade, diabetes, doenças cardíacas,
+  declínio cognitivo e transtornos de humor. O cérebro não tem como "compensar"
+  sono perdido de forma completa.
+
+❯ /context                                                                      
+  ⎿  Context Usage
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛀ ⛁   Sonnet 4.6
+                           claude-sonnet-4-6
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   17.8k/200k tokens (9%)
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   Estimated usage by category
+                           ⛁ System prompt: 7k tokens (3.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ System tools: 8.4k tokens (4.2%)
+                           ⛁ Memory files: 60 tokens (0.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ Skills: 519 tokens (0.3%)
+                           ⛁ Messages: 2.3k tokens (1.1%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛶ Free space: 148.8k (74.4%)
+                           ⛝ Autocompact buffer: 33k tokens (16.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     MCP tools · /mcp (loaded on-demand)
+
+     Available
+     └ mcp__claude_ai_Google_Drive__authenticate
+
+     Memory files · /memory
+     └ .claude/projects/-Users-rodrigo/memory/MEMORY.md: 60 tokens
+
+     Skills · /skills
+
+     User
+     └ android-cli: 43 tokens
+
+❯ 2. Como funciona a memória humana? Por que esquecemos coisas?                 
+
+⏺ Como funciona a memória humana?
+
+  Tipos de memória
+
+  ┌────────────────────┬──────────────────┬─────────────────────────────────┐
+  │        Tipo        │     Duração      │             Exemplo             │
+  ├────────────────────┼──────────────────┼─────────────────────────────────┤
+  │ Sensorial          │ milissegundos    │ imagem que persiste após piscar │
+  ├────────────────────┼──────────────────┼─────────────────────────────────┤
+  │ Trabalho (RAM)     │ segundos/minutos │ manter um número de telefone na │
+  │                    │                  │  cabeça                         │
+  ├────────────────────┼──────────────────┼─────────────────────────────────┤
+  │ Longo prazo        │ anos/vida        │ fatos, episódios pessoais       │
+  │ explícita          │                  │                                 │
+  ├────────────────────┼──────────────────┼─────────────────────────────────┤
+  │ Longo prazo        │ permanente       │ andar de bicicleta, tocar piano │
+  │ implícita          │                  │                                 │
+  └────────────────────┴──────────────────┴─────────────────────────────────┘
+
+  ---
+  Como uma memória é formada
+
+  1. Codificação — o hipocampo registra a experiência, conectando neurônios em
+  padrões (sinapses se fortalecem via potenciação de longa duração - LTP)
+  2. Consolidação — durante o sono, o hipocampo "repassa" o evento para o córtex
+   (memória de curto → longo prazo)
+  3. Recuperação — reativar o padrão de neurônios reconstrói a memória — ela é
+  reconstrutiva, não uma gravação fiel
+
+  ---
+  Por que esquecemos?
+
+  1. Decaimento — sinapses pouco usadas enfraquecem com o tempo (lei do "use ou
+  perca")
+
+  2. Interferência — memórias similares competem entre si:
+  - Retroativa: aprender algo novo apaga o antigo
+  - Proativa: o que você já sabia dificulta aprender o novo
+
+  3. Falha na recuperação — a memória existe mas você não consegue acessá-la
+  (fenômeno "ponta da língua") — falta uma pista de recuperação
+
+  4. Reconsolidação — toda vez que você lembra de algo, a memória fica instável
+  e pode ser reescrita com erros
+
+  5. Esquecimento ativo — o cérebro deliberadamente suprime memórias
+  irrelevantes para não sobrecarregar o sistema (neurônios inibidores no
+  hipocampo)
+
+  ---
+  Por que isso é útil?
+
+  Esquecer não é falha — é funcional. Sem ele, cada detalhe irrelevante
+  competiria com informações importantes. Pacientes com memória perfeita
+  (hipertimesia) frequentemente sofrem por não conseguir "deixar ir"
+  experiências ruins.
+
+  ▎ A memória humana otimiza para padrões e significado, não para detalhes 
+  literais — por isso você lembra da essência de uma conversa, mas não das 
+  palavras exatas.
+
+❯ /context                                                                      
+  ⎿  Context Usage
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛀ ⛁   Sonnet 4.6
+                           claude-sonnet-4-6
+     ⛁ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   19.7k/200k tokens (10%)
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   Estimated usage by category
+                           ⛁ System prompt: 7k tokens (3.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ System tools: 8.4k tokens (4.2%)
+                           ⛁ Memory files: 60 tokens (0.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ Skills: 519 tokens (0.3%)
+                           ⛁ Messages: 4.2k tokens (2.1%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛶ Free space: 146.8k (73.4%)
+                           ⛝ Autocompact buffer: 33k tokens (16.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     MCP tools · /mcp (loaded on-demand)
+
+     Available
+     └ mcp__claude_ai_Google_Drive__authenticate
+
+     Memory files · /memory
+     └ .claude/projects/-Users-rodrigo/memory/MEMORY.md: 60 tokens
+
+     Skills · /skills
+
+     User
+     └ android-cli: 43 tokens
+
+❯ Por que o céu é azul durante o dia e laranja/vermelho ao pôr do sol?          
+
+⏺ Por que o céu muda de cor?
+
+  A resposta é a mesma para os dois casos: espalhamento de Rayleigh.
+
+  ---
+  O princípio base
+
+  A luz do sol é branca — contém todas as cores do espectro (vermelho, laranja,
+  amarelo, verde, azul, violeta). Cada cor tem um comprimento de onda diferente:
+
+  - Vermelho → onda longa (~700 nm)
+  - Azul → onda curta (~450 nm)
+
+  Quando a luz atravessa a atmosfera, colide com moléculas de N₂ e O₂. Essas
+  moléculas espalham a luz com intensidade inversamente proporcional à 4ª 
+  potência do comprimento de onda:
+
+  ▎ Luz azul é espalhada ~10x mais que luz vermelha
+
+  ---
+  Céu azul ao meio-dia
+
+  O sol está alto — a luz percorre um caminho curto pela atmosfera. O azul é
+  espalhado em todas as direções, preenchendo o céu inteiro. O vermelho passa
+  quase direto (por isso o sol parece amarelo-branco).
+
+  ---
+  Laranja/vermelho ao pôr do sol
+
+  O sol está no horizonte — a luz percorre um caminho muito mais longo pela
+  atmosfera (até 40x mais espessa, obliquamente):
+
+  - O azul é espalhado tantas vezes que se dispersa e some antes de chegar aos
+  seus olhos
+  - Sobram apenas as ondas longas — vermelho e laranja — que chegam direto até
+  você
+
+  Meio-dia:   Sol → [pouca atmosfera] → olho    → azul espalhado, vermelho passa
+  Pôr do sol: Sol → [muita atmosfera] → olho    → azul perdido, só
+  vermelho/laranja chegam
+
+  ---
+  Curiosidades
+
+  - Por que não violeta? O violeta é espalhado ainda mais que o azul, mas nossos
+   olhos são menos sensíveis a ele — e parte é absorvida na atmosfera superior
+  - Céu de Marte é rosado — atmosfera fina com poeira de óxido de ferro espalha
+  luz de forma diferente
+  - Poluição intensifica o laranja — partículas maiores espalham comprimentos de
+   onda médios, saturando os tons quentes
+
+❯ /context                                                                      
+  ⎿  Context Usage
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛀ ⛁   Sonnet 4.6
+                           claude-sonnet-4-6
+     ⛁ ⛁ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   21.6k/200k tokens (11%)
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   Estimated usage by category
+                           ⛁ System prompt: 7k tokens (3.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ System tools: 8.4k tokens (4.2%)
+                           ⛁ Memory files: 60 tokens (0.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ Skills: 519 tokens (0.3%)
+                           ⛁ Messages: 6.1k tokens (3.1%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛶ Free space: 144.9k (72.5%)
+                           ⛝ Autocompact buffer: 33k tokens (16.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     MCP tools · /mcp (loaded on-demand)
+
+     Available
+     └ mcp__claude_ai_Google_Drive__authenticate
+
+     Memory files · /memory
+     └ .claude/projects/-Users-rodrigo/memory/MEMORY.md: 60 tokens
+
+     Skills · /skills
+
+     User
+     └ android-cli: 43 tokens
+
+❯ Como funciona uma vacina? Por que ela protege contra doenças?                 
+
+⏺ Como funciona uma vacina?
+
+  O sistema imune primeiro
+
+  Seu corpo tem dois sistemas de defesa:
+
+  - Imunidade inata — resposta rápida e genérica (febre, inflamação)
+  - Imunidade adaptativa — resposta lenta (dias), mas precisa e com memória
+
+  É a imunidade adaptativa que as vacinas exploram.
+
+  ---
+  O mecanismo central: memória imunológica
+
+  Quando você encontra um patógeno pela primeira vez:
+  1. Células B produzem anticorpos específicos
+  2. Células T destroem células infectadas
+  3. Demora ~1–2 semanas — tempo suficiente para a doença te adoecer
+
+  Após vencer a infecção, o corpo mantém células de memória (B e T) que ficam em
+   circulação por anos ou décadas.
+
+  Na segunda exposição ao mesmo patógeno: resposta em horas, antes dos sintomas
+  aparecerem.
+
+  ▎ A vacina simula a primeira infecção sem causar a doença.
+
+  ---
+  Tipos de vacinas
+
+  ┌────────────┬────────────────────────────────┬───────────────────────────┐
+  │    Tipo    │         Como funciona          │         Exemplos          │
+  ├────────────┼────────────────────────────────┼───────────────────────────┤
+  │ Atenuada   │ Vírus/bactéria vivo            │ Febre amarela, sarampo    │
+  │            │ enfraquecido                   │ (MMR)                     │
+  ├────────────┼────────────────────────────────┼───────────────────────────┤
+  │ Inativada  │ Patógeno morto                 │ Gripe injetável,          │
+  │            │                                │ poliomielite (Salk)       │
+  ├────────────┼────────────────────────────────┼───────────────────────────┤
+  │ Subunidade │ Apenas proteínas do patógeno   │ Hepatite B, HPV,          │
+  │            │                                │ coqueluche                │
+  ├────────────┼────────────────────────────────┼───────────────────────────┤
+  │ mRNA       │ Instrução para célula fabricar │ COVID-19 (Pfizer,         │
+  │            │  a proteína                    │ Moderna)                  │
+  ├────────────┼────────────────────────────────┼───────────────────────────┤
+  │ Vetor      │ Vírus inofensivo carregando    │ COVID-19 (AstraZeneca,    │
+  │ viral      │ gene do patógeno               │ Janssen)                  │
+  └────────────┴────────────────────────────────┴───────────────────────────┘
+
+  ---
+  O que acontece após a injeção
+
+  Vacina entra → antígenos reconhecidos → resposta imune ativada
+  → anticorpos produzidos → células de memória formadas
+  → patógeno real aparece → destruído rapidamente → você não adoece
+
+  ---
+  Por que algumas vacinas precisam de reforço?
+
+  - Células de memória diminuem com o tempo em algumas doenças
+  - O patógeno muta (gripe, COVID) — vacina atualizada necessária
+  - Resposta inicial insuficiente em pessoas imunossuprimidas
+
+  ---
+  Imunidade de rebanho
+
+  Quando uma porcentagem suficiente da população está imune (vacinada ou
+  recuperada), o patógeno não encontra hospedeiros suficientes para se propagar
+  — protegendo quem não pode se vacinar (recém-nascidos, imunossuprimidos).
+
+  O limiar varia: ~95% para sarampo (muito contagioso), ~70–85% para COVID.
+
+❯ /context                                                                      
+  ⎿  Context Usage
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛀ ⛁   Sonnet 4.6
+                           claude-sonnet-4-6
+     ⛁ ⛁ ⛁ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   23.5k/200k tokens (12%)
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   Estimated usage by category
+                           ⛁ System prompt: 7k tokens (3.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ System tools: 8.4k tokens (4.2%)
+                           ⛁ Memory files: 60 tokens (0.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ Skills: 519 tokens (0.3%)
+                           ⛁ Messages: 8.2k tokens (4.1%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛶ Free space: 142.9k (71.4%)
+                           ⛝ Autocompact buffer: 33k tokens (16.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     MCP tools · /mcp (loaded on-demand)
+
+     Available
+     └ mcp__claude_ai_Google_Drive__authenticate
+
+     Memory files · /memory
+     └ .claude/projects/-Users-rodrigo/memory/MEMORY.md: 60 tokens
+
+     Skills · /skills
+
+     User
+     └ android-cli: 43 tokens
+
+❯ Por que sentimos fome? Como o corpo sabe que precisa comer?                   
+
+⏺ Por que sentimos fome?
+
+  A fome não é uma única sensação — é o resultado de um sistema complexo de 
+  sinais hormonais, neurais e metabólicos coordenados principalmente pelo
+  hipotálamo.
+
+  ---
+  Os principais sinais de fome
+
+  Grelina — o hormônio da fome
+  - Produzida no estômago quando ele está vazio
+  - Sobe antes das refeições (o corpo aprende seus horários habituais) e cai
+  após comer
+  - Age diretamente no hipotálamo ativando a sensação de fome
+
+  Queda de glicose
+  - O cérebro consome ~20% da energia do corpo e depende quase exclusivamente de
+   glicose
+  - Neurônios no hipotálamo detectam queda nos níveis de glicose no sangue e
+  disparam o sinal de fome
+
+  Leptina — o hormônio da saciedade
+  - Produzida pelo tecido adiposo (gordura corporal)
+  - Sinaliza ao hipotálamo o quanto de energia está armazenada
+  - Leptina alta → menos fome | Leptina baixa (pouca gordura) → fome constante
+
+  ---
+  O hipotálamo como central de controle
+
+  Estômago vazio → grelina ↑ → hipotálamo ativado → fome
+  Após comer → grelina ↓, insulina ↑, leptina age → saciedade
+
+  Dois grupos de neurônios no hipotálamo se antagonizam:
+  - NPY/AgRP — estimulam fome, reduzem metabolismo
+  - POMC — suprimem fome, aumentam metabolismo
+
+  ---
+  Outros fatores que modulam a fome
+
+  ┌───────────────────────────────┬─────────────────────────────────────────┐
+  │             Fator             │                 Efeito                  │
+  ├───────────────────────────────┼─────────────────────────────────────────┤
+  │ Insulina (pós-refeição)       │ Suprime apetite                         │
+  ├───────────────────────────────┼─────────────────────────────────────────┤
+  │ CCK (intestino, após          │ Sinal de saciedade rápido               │
+  │ gordura/proteína)             │                                         │
+  ├───────────────────────────────┼─────────────────────────────────────────┤
+  │ GLP-1 (intestino)             │ Reduz apetite, base dos remédios        │
+  │                               │ Ozempic/Wegovy                          │
+  ├───────────────────────────────┼─────────────────────────────────────────┤
+  │ Cortisol (estresse)           │ Aumenta fome, especialmente por         │
+  │                               │ carboidratos                            │
+  ├───────────────────────────────┼─────────────────────────────────────────┤
+  │ Sono ruim                     │ Grelina ↑, leptina ↓ — clássico gatilho │
+  │                               │  de comer demais                        │
+  ├───────────────────────────────┼─────────────────────────────────────────┤
+  │ Vista/cheiro de comida        │ Ativa antecipação — fome "psicológica"  │
+  │                               │ real                                    │
+  └───────────────────────────────┴─────────────────────────────────────────┘
+
+  ---
+  Fome vs. apetite
+
+  - Fome — sinal fisiológico genuíno de necessidade energética
+  - Apetite — desejo por comida específica, influenciado por emoções, hábitos,
+  dopamina (o sistema de recompensa do cérebro)
+
+  É por isso que você consegue comer sobremesa mesmo "cheio" — o estômago está
+  satisfeito, mas o circuito de recompensa ainda responde ao açúcar/gordura.
+
+  ▎ A obesidade frequentemente envolve resistência à leptina: o cérebro não "lê"
+   o sinal de saciedade mesmo com muita gordura armazenada — análogo à 
+  resistência à insulina no diabetes.
+
+❯ /context                                                                      
+  ⎿  Context Usage
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛀ ⛁   Sonnet 4.6
+                           claude-sonnet-4-6
+     ⛁ ⛁ ⛁ ⛁ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   25.6k/200k tokens (13%)
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   Estimated usage by category
+                           ⛁ System prompt: 7k tokens (3.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ System tools: 8.4k tokens (4.2%)
+                           ⛁ Memory files: 60 tokens (0.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ Skills: 519 tokens (0.3%)
+                           ⛁ Messages: 10.3k tokens (5.1%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛶ Free space: 140.8k (70.4%)
+                           ⛝ Autocompact buffer: 33k tokens (16.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     MCP tools · /mcp (loaded on-demand)
+
+     Available
+     └ mcp__claude_ai_Google_Drive__authenticate
+
+     Memory files · /memory
+     └ .claude/projects/-Users-rodrigo/memory/MEMORY.md: 60 tokens
+
+     Skills · /skills
+
+     User
+     └ android-cli: 43 tokens
+
+❯ Como funciona a gravidade? Por que objetos caem?                              
+
+⏺ Como funciona a gravidade?
+
+  Há duas respostas — uma clássica e uma moderna — e ambas são úteis.
+
+  ---
+  Newton (1687): força à distância
+
+  Newton descreveu a gravidade como uma força de atração entre qualquer dois
+  objetos com massa:
+
+  F = G × (m₁ × m₂) / r²
+
+  - Quanto maior a massa → maior a força
+  - Quanto maior a distância → muito menor a força (cai com o quadrado)
+  - G = constante gravitacional universal
+
+  Isso explicou órbitas planetárias, marés e por que objetos caem. Mas Newton
+  admitiu: "não sei o que causa essa força."
+
+  ---
+  Einstein (1915): curvatura do espaço-tempo
+
+  A Relatividade Geral reformulou tudo:
+
+  ▎ Massa curva o espaço-tempo. Objetos seguem a curvatura — isso é o que 
+  chamamos de gravidade.
+
+  A analogia clássica: imagine uma bola pesada sobre um lençol elástico. Ela
+  cria uma depressão. Uma bolinha de gude rolando perto dela é "atraída" — não
+  por uma força, mas pela curvatura do tecido.
+
+  Só que no universo real, é o espaço-tempo em 4 dimensões que se curva, não um
+  tecido 2D.
+
+  Massa/energia → curva espaço-tempo → objetos seguem geodésicas (caminhos mais
+  "retos" no espaço curvo) → parecem "cair"
+
+  ---
+  Por que objetos caem especificamente?
+
+  Quando você solta um objeto, ele segue o caminho mais natural no espaço-tempo
+  curvado pela Terra — que aponta para o centro da Terra. Sem o chão te
+  bloqueando, você estaria em queda livre constante (como astronautas na ISS).
+
+  ▎ Curiosamente: astronautas na ISS estão em queda livre constante em direção à
+   Terra — só que se movem tão rápido horizontalmente que a Terra "curva para 
+  longe" na mesma taxa. Isso é orbitar.
+
+  ---
+  O princípio da equivalência
+
+  Einstein percebeu algo estranho: não dá para distinguir gravidade de 
+  aceleração.
+
+  Dentro de um elevador fechado:
+  - Em queda livre no espaço → você flutua
+  - Acelerando a 9,8 m/s² no espaço → você sente seu peso normal
+  - Parado na Terra → idem
+
+  Gravidade e aceleração são fisicamente idênticas — essa é a base da
+  Relatividade Geral.
+
+  ---
+  O que ainda não sabemos
+
+  ┌───────────────────────────────────┬─────────────────────────────────────┐
+  │              Questão              │               Status                │
+  ├───────────────────────────────────┼─────────────────────────────────────┤
+  │ O que "transmite" a gravidade?    │ Gráviton (partícula hipotética) —   │
+  │                                   │ nunca detectado                     │
+  ├───────────────────────────────────┼─────────────────────────────────────┤
+  │ Como unificar gravidade com       │ Maior problema em aberto da física  │
+  │ mecânica quântica?                │                                     │
+  ├───────────────────────────────────┼─────────────────────────────────────┤
+  │ O que é matéria escura?           │ Curva o espaço-tempo mas não        │
+  │                                   │ interage com luz                    │
+  └───────────────────────────────────┴─────────────────────────────────────┘
+
+  ▎ A gravidade é a mais fraca das 4 forças fundamentais — 10³⁸ vezes mais fraca
+   que o eletromagnetismo — mas domina o universo em escalas grandes porque 
+  sempre atrai e nunca se cancela.
+
+❯ /context                                                                      
+  ⎿  Context Usage
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛁ ⛀ ⛀ ⛁   Sonnet 4.6
+                           claude-sonnet-4-6
+     ⛁ ⛁ ⛁ ⛁ ⛁ ⛶ ⛶ ⛶ ⛶ ⛶   27.7k/200k tokens (14%)
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   Estimated usage by category
+                           ⛁ System prompt: 7k tokens (3.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ System tools: 8.4k tokens (4.2%)
+                           ⛁ Memory files: 60 tokens (0.0%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛁ Skills: 519 tokens (0.3%)
+                           ⛁ Messages: 12.4k tokens (6.2%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶   ⛶ Free space: 138.6k (69.3%)
+                           ⛝ Autocompact buffer: 33k tokens (16.5%)
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ ⛶ 
+
+     ⛶ ⛶ ⛶ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ ⛝ 
+
+     MCP tools · /mcp (loaded on-demand)
+
+     Available
+     └ mcp__claude_ai_Google_Drive__authenticate
+
+     Memory files · /memory
+     └ .claude/projects/-Users-rodrigo/memory/MEMORY.md: 60 tokens
+
+     Skills · /skills
+
+     User
+     └ android-cli: 43 tokens
