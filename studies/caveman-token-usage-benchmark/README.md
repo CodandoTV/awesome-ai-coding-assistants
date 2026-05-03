@@ -8,6 +8,8 @@ The main question was simple:
 
 This folder contains the raw Claude Code logs and visual summaries used in the study.
 
+> **Note:** This study was conducted on **May 3, 2026**, using the version of Caveman available at that date.
+
 ## Structure
 
 ```text
@@ -139,3 +141,7 @@ For code tasks, especially inside Claude Code, reducing verbosity is not the sam
 This study was also used as supporting material for a video on the CodandoTV channel:
 
 [CodandoTV on YouTube](https://www.youtube.com/@CodandoTV)
+
+---
+
+> **Disclaimer:** Caveman is an actively developed tool. Results may differ in future versions as the plugin evolves — improvements in compression, token handling, or new modes could change these findings significantly.
